@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Status · WebScraper Pro</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%236366f1'/><circle cx='16' cy='16' r='9' fill='none' stroke='white' stroke-width='2'/></svg>"/>
+<link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+<div class="orbs" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+
+<header class="hdr glass">
+  <div class="hdr-in">
+    <a class="logo" href="/">
+      <div class="logo-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></div>
+      <span>WebScraper <span class="grad-text">Pro</span></span>
+    </a>
+    <div class="hdr-right" style="margin-left:auto">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+        <svg class="ico-sun" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="10" r="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="10" y1="16" x2="10" y2="18"/><line x1="2" y1="10" x2="4" y2="10"/><line x1="16" y1="10" x2="18" y2="10"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="14.4" y1="14.4" x2="15.8" y2="15.8"/><line x1="4.2" y1="15.8" x2="5.6" y2="14.4"/><line x1="14.4" y1="5.6" x2="15.8" y2="4.2"/></svg>
+        <svg class="ico-moon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.5 11.5A7.5 7.5 0 0 1 8.5 2.5a7.5 7.5 0 1 0 9 9z"/></svg>
+      </button>
+      <a class="btn-ghost" href="/" style="padding:8px 18px;font-size:.85rem">Home</a>
+    </div>
+  </div>
+</header>
+
+<main class="doc-wrap">
+  <div class="doc-card">
+    <h1>System Status</h1>
+    <div class="doc-meta">All systems operational</div>
+
+    <div class="status-row"><span>Web application</span><span class="status-ok">Operational</span></div>
+    <div class="status-row"><span>Scraping engine (JSoup)</span><span class="status-ok">Operational</span></div>
+    <div class="status-row"><span>MySQL database</span><span class="status-ok">Operational</span></div>
+    <div class="status-row"><span>Screenshot service</span><span class="status-ok">Operational</span></div>
+    <div class="status-row"><span>Export pipeline</span><span class="status-ok">Operational</span></div>
+
+    <h2>About this page</h2>
+    <p>This is a local demo deployment. Service availability depends on your XAMPP MySQL instance and the local server running on port 8080.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-in">
+    <div class="sf-brand"><span class="sf-logo"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></span> © 2026 WebScraper Pro</div>
+    <nav class="sf-links">
+      <a href="/">Home</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/security">Security</a><a href="/status">Status</a><a href="/docs">Docs</a><a href="/contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+const h=document.documentElement;h.setAttribute('data-theme',localStorage.getItem('theme')||'dark');
+document.getElementById('themeBtn').onclick=()=>{const n=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('theme',n);};
+</script>
+</body>
+</html>

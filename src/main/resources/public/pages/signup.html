@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sign Up · WebScraper Pro</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%236366f1'/><circle cx='16' cy='16' r='9' fill='none' stroke='white' stroke-width='2'/><line x1='7' y1='16' x2='25' y2='16' stroke='white' stroke-width='2'/></svg>"/>
+<link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<div class="orbs" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+
+<button class="theme-btn theme-float" id="themeBtn" aria-label="Toggle theme">
+  <svg class="ico-sun" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="10" r="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="10" y1="16" x2="10" y2="18"/><line x1="2" y1="10" x2="4" y2="10"/><line x1="16" y1="10" x2="18" y2="10"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="14.4" y1="14.4" x2="15.8" y2="15.8"/><line x1="4.2" y1="15.8" x2="5.6" y2="14.4"/><line x1="14.4" y1="5.6" x2="15.8" y2="4.2"/></svg>
+  <svg class="ico-moon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.5 11.5A7.5 7.5 0 0 1 8.5 2.5a7.5 7.5 0 1 0 9 9z"/></svg>
+</button>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="auth-head">
+      <a class="auth-logo" href="/" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>
+      </a>
+      <h1>Create account</h1>
+      <p>Sign up to start extracting web data</p>
+    </div>
+
+    <div class="auth-toggle">
+      <button onclick="location.href='/signin'">Sign In</button>
+      <button class="active">Sign Up</button>
+    </div>
+
+    <div class="auth-body">
+      <div class="auth-field">
+        <label class="lbl" for="nameIn">Full Name<span class="req">*</span></label>
+        <div class="irow">
+          <svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="6.5" r="3.5"/><path d="M3.5 17a6.5 6.5 0 0 1 13 0"/></svg>
+          <input id="nameIn" class="inp" type="text" placeholder="Jane Doe" autocomplete="name" required/>
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="lbl" for="emailIn">Email<span class="req">*</span></label>
+        <div class="irow">
+          <svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M3 5l7 5 7-5"/></svg>
+          <input id="emailIn" class="inp" type="email" placeholder="you@example.com" autocomplete="email" required/>
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="lbl" for="passIn">Password<span class="req">*</span></label>
+        <div class="irow">
+          <svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="9" width="13" height="8" rx="2"/><path d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9"/></svg>
+          <input id="passIn" class="inp has-eye" type="password" placeholder="••••••••" autocomplete="new-password" required minlength="6"/>
+          <button type="button" class="eye-btn" data-target="passIn" aria-label="Show password">
+            <svg class="eye-open" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1.5 10S4.5 4 10 4s8.5 6 8.5 6-3 6-8.5 6-8.5-6-8.5-6z"/><circle cx="10" cy="10" r="2.5"/></svg>
+            <svg class="eye-off" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1.5 10S4.5 4 10 4a8.6 8.6 0 0 1 4 1M18.5 10S15.5 16 10 16a8.6 8.6 0 0 1-4-1"/><path d="M8 8a2.5 2.5 0 0 0 3.5 3.5"/><line x1="3" y1="3" x2="17" y2="17"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="auth-field">
+        <label class="lbl" for="confirmIn">Confirm Password<span class="req">*</span></label>
+        <div class="irow">
+          <svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="9" width="13" height="8" rx="2"/><path d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9"/><path d="M8.5 13l1.2 1.2 2.3-2.4"/></svg>
+          <input id="confirmIn" class="inp has-eye" type="password" placeholder="••••••••" autocomplete="new-password" required minlength="6"/>
+          <button type="button" class="eye-btn" data-target="confirmIn" aria-label="Show password">
+            <svg class="eye-open" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1.5 10S4.5 4 10 4s8.5 6 8.5 6-3 6-8.5 6-8.5-6-8.5-6z"/><circle cx="10" cy="10" r="2.5"/></svg>
+            <svg class="eye-off" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1.5 10S4.5 4 10 4a8.6 8.6 0 0 1 4 1M18.5 10S15.5 16 10 16a8.6 8.6 0 0 1-4-1"/><path d="M8 8a2.5 2.5 0 0 0 3.5 3.5"/><line x1="3" y1="3" x2="17" y2="17"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="authErr" class="field-err"></div>
+
+      <button id="submitBtn" class="btn btn-full">
+        <span class="lbl-s">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4l6 6-6 6M3 10h12"/></svg>
+          Create Account
+        </span>
+        <span class="sp"></span>
+      </button>
+
+      <div class="auth-foot">
+        Already have an account? <a href="/signin">Sign in</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<footer class="site-footer">
+  <div class="site-footer-in">
+    <div class="sf-brand"><span class="sf-logo"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></span> © 2026 WebScraper Pro</div>
+    <nav class="sf-links">
+      <a href="/">Home</a><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/security">Security</a><a href="/status">Status</a><a href="/docs">Docs</a><a href="/contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/js/api.js"></script>
+<script src="/js/signup.js"></script>
+</body>
+</html>

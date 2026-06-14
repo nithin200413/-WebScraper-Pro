@@ -1,0 +1,20 @@
+# Maven build output
+target/
+
+# IDE files
+.idea/
+*.iml
+.vscode/settings.json
+.classpath
+.project
+.settings/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Local env overrides
+.env
